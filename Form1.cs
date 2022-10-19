@@ -384,12 +384,7 @@ namespace TransporeonRechnungen
 
                 this.Text = "SQL-Server-Abfrage 2/2";
                 SqlCommand Transportnummern_Referenznummern = new SqlCommand("" +
-                    $@"  SELECT RefNr, LPosNr, EigenUS 
-                    FROM XXASLAuf WHERE 
-                    ( (RefNr = 'NoWayItsThis') 
-                    {NRs})
-                    AND ErstDat >= DATEADD(MONTH, DATEDIFF(MONTH, 0, DATEADD(MONTH, -6, current_timestamp)), 0)
-                    GROUP BY RefNr, LPosNr, EigenUS"
+                    $@"  SELECT ..."
                     , cnn2);
                 Transportnummern_Referenznummern.CommandTimeout = 6000;
 
